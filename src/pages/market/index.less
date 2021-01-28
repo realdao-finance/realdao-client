@@ -1,0 +1,124 @@
+.market,.darkPage{
+  width: 800px;
+  position:relative;
+  min-height:100%;
+  :global {
+    .ant-card {
+      border-radius: 10px;
+      margin-bottom: 18px;
+      box-shadow: 4px 4px 40px #E3E6EC;
+      &:hover {
+        box-shadow: 4px 4px 40px #E3E6EC;
+      }
+    }
+    .ant-card-body {
+      overflow-x: hidden;
+    }
+  }
+  .topArea{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .topLeftArea{
+      display: flex;
+      align-items: center;
+      img{
+        width: 32px;
+        height: 32px;
+        display: block;
+        margin-right: 5px;
+      }
+      span{
+        font-weight: bold;
+        font-size: 18px;
+        color: #11142D;
+      }
+    }
+    .detailBtn{
+      width: 61px;
+      height: 24px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #252B57;
+      font-size: 12px;
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 0;
+      cursor: pointer;
+    }
+  }
+  .progressArea{
+    margin: 12px 0 18px;
+    .progressText{
+      font-size: 12px;
+      color: #95A9C9;
+    }
+  }
+  .borrowSupply{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .item{
+      width: 50%;
+      padding: 18px 0;
+      text-align: center;
+      border-top: 1px rgba(149,169,201,0.2) solid;
+      border-bottom: 1px rgba(149,169,201,0.2) solid;
+      .title {
+        font-size: 12px;
+        margin-bottom: 0;
+        color: #95A9C9;
+      }
+
+      .number {
+        font-size: 16px;
+        color: #11142D;
+        margin-bottom: 0;
+      }
+    }
+    .item:first-child{border-right: 1px rgba(149,169,201,0.2) solid}
+  }
+  .btnList{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 25px;
+    .btnItem{
+      width: 140px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      //background-image: linear-gradient(to right,#5D7AD3,#6C5DD3);
+      background-color: #6C5DD3;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .btnItem:first-child{
+      margin-right: 20px;
+    }
+    .btnItem:hover{
+      //background-image: linear-gradient(to right,#4f6ac8,#5546c6);
+      background-color: #5849BB;
+    }
+  }
+}
+
+
+
+.darkPage{
+  .topArea .topLeftArea span,.borrowSupply .item .number{color: #fff;}
+  .topArea .detailBtn{background-color: #2A2D39;color: #808191;}
+  .progressArea .progressText,.borrowSupply .item .title{color: #808191;}
+  .borrowSupply .item,.borrowSupply .item:first-child{
+    border-color: rgba(149, 169, 201, 0.1);
+  }
+}
+
+

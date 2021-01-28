@@ -1,0 +1,118 @@
+.account,.darkPage{
+  position: relative;
+  width: 800px;
+  height: 100%;
+  :global {
+    .ant-card {
+      border-radius: 10px;
+      margin-bottom: 18px;
+      box-shadow: 4px 4px 40px #E3E6EC;
+      &:hover {
+        box-shadow: 4px 4px 40px #E3E6EC;
+      }
+    }
+    .ant-card-body {
+      overflow-x: hidden;
+    }
+    .ant-table-thead > tr > th{
+      background-color: unset;
+      font-size: 12px !important;
+      color: #95A9C9 !important;
+      font-weight: normal;
+      width: 20%;
+    }
+    .ant-table-tbody > tr > td, .ant-table tfoot > tr > th, .ant-table tfoot > tr > td{
+      padding: 12px;
+      border: none;
+      font-size: 14px;
+      color: #11142D;
+      width: 20%;
+    }
+    .ant-table-tbody > tr:first-child > td{padding-top: 25px;word-break: break-all}
+    .ant-table-tbody > tr:last-child > td{padding-bottom: 25px;}
+    .ant-table{
+      background-color: transparent;
+      .ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
+        background: transparent;
+      }
+    }
+  }
+  .notConnected{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    .notConnectedTip{
+      font-size: 18px;
+      color: #95A9C9;
+      line-height: 1;
+      margin: 30px 0 20px;
+    }
+    .connectedBtn{
+      width: 150px;
+      height: 32px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(to right,#5D7AD3,#6C5DD3);
+      font-size: 14px;
+      color: #fff;
+      margin: 0 auto;
+      cursor: pointer;
+      img{
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.nameArea{
+  display: flex;
+  align-items: center;
+  img{
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin-right: 10px;
+  }
+}
+.btnList{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .btnItem{
+    width: 72px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    //background-image: linear-gradient(to right,#5D7AD3,#6C5DD3);
+    background-color: #6C5DD3;
+    border-radius: 10px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .btnItem:first-child{
+    margin-right: 20px;
+  }
+  .btnItem:hover{
+    //background-image: linear-gradient(to right,#4f6ac8,#5546c6);
+    background-color: #5849BB;
+  }
+}
+
+.darkPage{
+  :global{
+    .ant-table-thead > tr > th{color: #808191 !important; border-color: rgba(149,169,201,0.1);}
+    .ant-table-tbody > tr > td, .account___TB_Tx .ant-table tfoot > tr > th, .account___TB_Tx .ant-table tfoot > tr > td{
+      color: #fff;
+    }
+  }
+}

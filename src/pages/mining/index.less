@@ -1,0 +1,108 @@
+.market,.darkPage{
+  width: 800px;
+  position: relative;
+  min-height:100%;
+  :global {
+    .ant-card {
+      border-radius: 10px;
+      margin-bottom: 18px;
+      box-shadow: 4px 4px 40px #E3E6EC;
+      &:hover {
+        box-shadow: 4px 4px 40px #E3E6EC;
+      }
+    }
+    .ant-card-body {
+      overflow-x: hidden;
+    }
+  }
+  .miningTopArea{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .miningName{
+      display: flex;
+      align-items: center;
+      img{
+        width: 26px;
+        height: 26px;
+        margin-right: 5px;
+        display: block;
+      }
+      span{
+        font-size: 16px;
+        color: #11142D;
+        font-weight: bold;
+      }
+    }
+    .countdownArea{
+      display: flex;
+      align-items: center;
+      padding: 10px 13px;
+      border-radius: 50px;
+      background-color: #FFA000;
+      color: #fff;
+      span{
+        font-size: 12px;
+        margin-left: 8px;
+      }
+    }
+    .statusArea{
+      display: flex;
+      align-items: center;
+      span{
+        font-size: 14px;
+        color: #95A9C9;
+      }
+      .active,.closed{
+        width: 8px;
+        height: 8px;
+        background-color: #83D420;
+        border-radius: 50%;
+        margin-left: 8px;
+      }
+      .closed{
+        background-color: #F45050;
+      }
+    }
+  }
+  .btnList,.btnListDisabled{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+    .btnItem{
+      width: 140px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      //background-image: linear-gradient(to right,#5D7AD3,#6C5DD3);
+      background-color: #6C5DD3;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+    .btnItem:hover{
+      //background-image: linear-gradient(to right,#4f6ac8,#5546c6);
+      background-color: #5849BB;
+    }
+  }
+  .btnListDisabled .btnItem{opacity: 0.5}
+  .btnListDisabled .btnItem:hover{
+    //background-image: linear-gradient(to right,#5D7AD3,#6C5DD3);
+    background-color: #6C5DD3;
+    opacity: 0.5;
+  }
+}
+
+.darkPage{
+  .miningTopArea .miningName span{color: #fff;}
+  .miningTopArea .countdownArea{background-color: #2A2D39;}
+  .btnListDisabled .btnItem{opacity: 0.3}
+  .miningTopArea .statusArea span{color: #808191}
+}
+

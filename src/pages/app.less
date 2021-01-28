@@ -1,0 +1,294 @@
+//dialog
+:global{
+  .ant-modal{
+    top: calc(50% - 140px);
+    padding-bottom: 0;
+  }
+  .ant-modal-content,.ant-modal{
+    width: 360px !important;
+    border-radius: 10px;
+  }
+  .ant-modal-close{
+    top: 20px;
+    right: 20px;
+    .ant-modal-close-x{
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(45,49,77,0.1);
+      color: #11142D;
+      background-color: #fff;
+    }
+  }
+  .ant-modal-body{
+    background-image: linear-gradient(to bottom, rgba(238,241,246,0.4), #fff);
+    border-radius: 10px;
+  }
+  .ant-modal-footer{
+    padding: 10px 16px 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    .ant-btn{
+      width: 144px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+      //background-image: linear-gradient(to right,#5D7AD3,#6C5DD3);
+      background-color: #6C5DD3;
+    }
+    .ant-btn:hover{
+      //background-image: linear-gradient(to right,#4f6ac8,#5546c6);
+      background-color: #5849BB;
+    }
+  }
+  .ant-modal-footer button + button{margin-left: 25px;}
+  .ant-form-item{margin-bottom: 0;}
+  .ant-input{
+    &::placeholder{
+      color:#C3D1E3
+    }
+  }
+}
+.dialogContent{
+  .title{
+    height: 65px;
+    .dialogTitle{font-size: 16px;color: #11142D;margin-bottom: 4px;}
+    .titleDes{font-size: 12px;color: #95A9C9;margin: 0}
+  }
+  .inputArea{
+    .inputDes{
+      margin-bottom: 10px;
+      .des{
+        font-size: 12px;
+        color: #252B57;
+        margin: 0 0 5px 0;
+        flex-shrink: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span{
+          font-weight: bold;
+        }
+      }
+    }
+    .inputContent{
+      position: relative;
+      input{
+        width: 100%;
+        border: 1px #E2EBF6 solid;
+        border-radius: 10px;
+        height: 52px;
+        line-height: 52px;
+        font-size: 16px;
+        color: #11142D;
+        //font-weight: bold;
+        padding: 0 10px;
+        background: unset;
+      }
+      .maxBtn{
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translate(0,-50%);
+      }
+    }
+    .numberBtnList{
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translate(0,-50%);
+      .maxBtn{
+        margin-left: 8px;
+        position: unset;
+        transform: unset;
+      }
+    }
+    .maxBtn{
+      width: 44px;
+      height: 20px;
+      background-color: #F1EFFB;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 12px;
+      color: #5F74EE;
+      border: none;
+    }
+    .checkedNumberBtn{
+      background-color: #FF754C !important;
+      color: #fff !important;
+    }
+  }
+  .detailContent{
+    .detailList{
+      .detailItem{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .detailTitle{
+          line-height: 1;
+          font-size: 12px;
+          color: #252B57;
+          margin-bottom: 0;
+        }
+        .detailValue{
+          line-height: 1;
+          margin-bottom: 0;
+          font-size: 12px;
+          color: #252B57;
+          font-weight: bold;
+        }
+      }
+    }
+    .detailList:first-child{
+      border-bottom: 1px rgba(149,169,201,0.2) solid;
+      margin-bottom: 20px;
+    }
+  }
+  .increaseText{
+    font-size: 14px;
+    color: #252B57;
+    line-height: 1.5;
+  }
+  .linkArea{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px #11142D solid;
+    width: fit-content;
+    padding-bottom: 5px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    h3{
+      font-size: 16px;
+      color: #11142D;
+      line-height: 1;
+      margin: 0;
+    }
+    img{
+      width: 10px;
+      height: 10px;
+      display: block;
+      margin-left: 5px;
+    }
+  }
+  .exitInfo{
+    background-color: #F9FBFD;
+    border-radius: 10px;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    .infoItem{
+      width: 50%;
+      text-align: center;
+      .infoTitle{
+        font-size: 12px;
+        color: #95A9C9;
+        margin: 0;
+      }
+      .infoValue{
+        font-size: 20px;
+        color: #11142D;
+        margin: 0;
+      }
+    }
+    .infoItem:first-child{
+      border-right: 1px rgba(149,169,201,0.2) solid ;
+    }
+  }
+}
+
+.loading{
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #414357;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  span{font-size: 15px; margin-top: 8px; display: block;}
+}
+
+.pageArea,.pageAreaDark{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  .prev,.next,.disabledBtn{
+    font-size: 26px;
+    color: #6C5DD3;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+  }
+  .disabledBtn{
+    color: #EAEEF4;
+  }
+  .page{
+    font-size: 12px;
+    color: #11142D;
+    margin: 0 15px;
+  }
+}
+.pageAreaDark{
+  .disabledBtn{color: #242731;}
+  .prev:after,.next:after,.disabledBtn:after{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: -1;
+  }
+  .disabledBtn:after{background-color: #808191;}
+  .page{color: #fff;}
+}
+
+.modalDark{
+  :global{
+    .ant-modal-body{background-image: linear-gradient(to bottom, #151821, transparent);}
+    .ant-modal-content{background-color: #242731;}
+    .ant-modal-close .ant-modal-close-x{background-color: #1F2128;color: #fff;}
+    .ant-input{
+      &::placeholder{
+        color:#41454F
+      }
+    }
+  }
+  .dialogContent .title .dialogTitle,.dialogContent .linkArea h3,.dialogContent .exitInfo .infoItem .infoValue,.dialogContent .detailContent .detailList .detailItem .detailValue{
+    color: #fff;
+  }
+  .dialogContent .linkArea{border-color: #fff;}
+  .dialogContent .inputArea .inputDes .des,
+  .dialogContent .increaseText,
+  .dialogContent .detailContent .detailList .detailItem .detailTitle{color: #fff;}
+  .dialogContent .title .titleDes,.dialogContent .exitInfo .infoItem .infoTitle{color: #808191}
+  .dialogContent .inputArea  .inputContent  input{background-color: transparent;color: #fff;border-color: rgba(149,169,201,0.1)}
+  .dialogContent .inputArea  .maxBtn{background-color: #2A2D39;color: #808191;}
+  .dialogContent .exitInfo{background-color: #2A2D39;}
+  .dialogContent .exitInfo .infoItem:first-child,.dialogContent .detailContent .detailList:first-child{border-color: rgba(149,169,201,0.1)}
+}
